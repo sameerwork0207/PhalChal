@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "KhetConnect | Farm to Student",
+  title: "फलचल | Farm to Student",
   description: "Rural farm-to-student delivery platform connecting farmers directly with college students.",
 };
 

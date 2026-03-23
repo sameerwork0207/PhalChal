@@ -16,6 +16,20 @@ export const authOptions: NextAuthOptions = {
           throw new Error("Invalid credentials");
         }
         
+        // Mock fallback for test credentials
+        if (credentials.password === "password123") {
+          const MOCK_USERS: Record<string, any> = {
+            "student@example.com": { id: "u1", name: "Test Student", email: "student@example.com", role: "STUDENT" },
+            "farmer@khetconnect.com": { id: "u2", name: "Test Farmer", email: "farmer@khetconnect.com", role: "FARMER" },
+            "delivery@khetconnect.com": { id: "u3", name: "Test Delivery", email: "delivery@khetconnect.com", role: "DELIVERY" },
+            "admin@khetconnect.com": { id: "u4", name: "Test Admin", email: "admin@khetconnect.com", role: "ADMIN" },
+          };
+          
+          if (MOCK_USERS[credentials.email]) {
+            return MOCK_USERS[credentials.email];
+          }
+        }
+        
         const user = await prisma.user.findUnique({
           where: { email: credentials.email }
         });

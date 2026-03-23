@@ -29,15 +29,16 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex min-h-[80vh] flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-      <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-        <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-          Sign in to your account
-        </h2>
-      </div>
+    <div className="flex min-h-[80vh] flex-1 flex-col justify-center px-6 py-12 lg:px-8 bg-gray-50">
+      <div className="bg-white p-8 sm:p-12 shadow-xl rounded-2xl sm:mx-auto sm:w-full sm:max-w-md border border-gray-100">
+        <div className="sm:mx-auto sm:w-full sm:max-w-sm">
+          <h2 className="text-center text-3xl font-bold leading-9 tracking-tight text-gray-900">
+            Sign in to your account
+          </h2>
+        </div>
 
-      <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-        <form className="space-y-6" onSubmit={handleSubmit}>
+        <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+          <form className="space-y-6" onSubmit={handleSubmit}>
           {error && (
             <div className="text-red-500 text-sm bg-red-50 p-3 rounded-md">
               {error}
@@ -101,6 +102,7 @@ export default function LoginPage() {
           </ul>
         </div>
       </div>
+    </div>
     </div>
   );
 }

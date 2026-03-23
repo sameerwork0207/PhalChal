@@ -9,9 +9,12 @@ type ProductCardProps = {
   price: number;
   unit: string;
   farmerName?: string;
+  image?: string;
+  village?: string;
+  rating?: number;
 };
 
-export default function ProductCard({ id, name, category, price, unit, farmerName }: ProductCardProps) {
+export default function ProductCard({ id, name, category, price, unit, farmerName, image, village, rating }: ProductCardProps) {
   const { addToCart } = useCart();
 
   const handleAdd = () => {
@@ -21,11 +24,15 @@ export default function ProductCard({ id, name, category, price, unit, farmerNam
   return (
     <div className="group relative bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-lg transition-all flex flex-col overflow-hidden">
       <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden bg-gray-100 lg:aspect-none lg:h-48 relative">
-        <div className="absolute inset-0 flex items-center justify-center text-gray-400">
-           <svg className="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-           </svg>
-        </div>
+        {image ? (
+          <img src={image} alt={name} className="h-full w-full object-cover object-center lg:h-full lg:w-full" />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center text-gray-400">
+             <svg className="h-16 w-16" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+             </svg>
+          </div>
+        )}
       </div>
       <div className="p-5 flex flex-col flex-1">
         <div className="flex justify-between">
@@ -34,7 +41,15 @@ export default function ProductCard({ id, name, category, price, unit, farmerNam
           </h3>
           <p className="text-sm font-medium text-green-600 bg-green-50 px-2 py-1 rounded-md">{category}</p>
         </div>
-        <p className="mt-1 text-sm text-gray-500 line-clamp-1">{farmerName ? `Farmer: ${farmerName}` : 'Local Farmer'}</p>
+        <p className="mt-1 text-sm text-gray-500 line-clamp-1">
+          {farmerName ? `Farmer: ${farmerName}` : 'Local Farmer'} {village && `(${village})`}
+        </p>
+        {rating && (
+          <div className="flex items-center mt-1">
+            <span className="text-yellow-400 text-sm">★★★★★</span>
+            <span className="ml-1 text-xs text-gray-500">{rating} out of 5</span>
+          </div>
+        )}
         <div className="mt-auto pt-4 flex items-center justify-between">
           <p className="text-xl font-bold text-gray-900">₹{price}<span className="text-sm text-gray-500 font-normal"> / {unit}</span></p>
           <button 

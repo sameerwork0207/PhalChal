@@ -3,21 +3,26 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="bg-white">
+    <div className="bg-white relative overflow-hidden">
+      {/* Watermark Logo */}
+      <div className="absolute inset-0 z-0 flex items-center justify-center opacity-5 pointer-events-none">
+        <Image src="/logo.png" alt="Watermark" width={800} height={800} className="object-contain" priority />
+      </div>
+
       {/* Hero Section */}
-      <div className="relative isolate px-6 pt-14 lg:px-8">
+      <div className="relative z-10 isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 text-center">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
             Fresh from the village, directly to your dorm.
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            KhetConnect bridges the gap between rural farmers and college students. 
+            फलचल bridges the gap between rural farmers and college students. 
             Get fresh, affordable vegetables, fruits, and dairy delivered twice daily.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Link
               href="/products"
-              className="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
+              className="rounded-lg bg-green-600 px-8 py-4 text-xl font-bold text-white shadow-lg hover:bg-green-500 hover:scale-105 transition-transform duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600"
             >
               Order Now
             </Link>
@@ -29,7 +34,7 @@ export default function Home() {
       </div>
 
       {/* Features Section */}
-      <div className="bg-gray-50 py-24 sm:py-32">
+      <div className="bg-gray-50/90 relative z-10 py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:text-center">
             <h2 className="text-base font-semibold leading-7 text-green-600">Deliveries Fast</h2>

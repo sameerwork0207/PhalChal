@@ -79,11 +79,17 @@ export default function CartPage() {
     );
   }
 
-  // Dummy villages for the UI (Normally fetched from DB)
+  // Delivery locations for the UI
   const dummyVillages = [
-    { id: "v1", name: "Dhamori" },
-    { id: "v2", name: "Pohegaon" },
-    { id: "v3", name: "Yesgaon" }
+    { id: "v1", name: "Hostel College Campus" },
+    { id: "v2", name: "G1" },
+    { id: "v3", name: "G2" },
+    { id: "v4", name: "B1" },
+    { id: "v5", name: "B2 Hostel" },
+    { id: "v6", name: "Annapurna Nagar" },
+    { id: "v7", name: "Major Hostel" },
+    { id: "v8", name: "Biroba Mandir" },
+    { id: "v9", name: "Godawari Complex" },
   ];
 
   return (

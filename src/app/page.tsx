@@ -5,8 +5,8 @@ export default function Home() {
   return (
     <div className="bg-white relative overflow-hidden">
       {/* Watermark Logo */}
-      <div className="absolute inset-0 z-0 flex items-center justify-center opacity-5 pointer-events-none">
-        <Image src="/logo.png" alt="Watermark" width={800} height={800} className="object-contain" priority />
+      <div className="absolute inset-x-0 -top-32 md:-top-64 z-0 flex items-center justify-center opacity-5 pointer-events-none">
+        <Image src="/logo.png" alt="Watermark" width={1000} height={1000} className="object-contain" priority />
       </div>
 
       {/* Hero Section */}

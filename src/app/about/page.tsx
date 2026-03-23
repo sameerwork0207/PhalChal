@@ -22,14 +22,14 @@ export default function AboutPage() {
           <h3 className="text-2xl font-bold tracking-tight text-gray-900 mb-8 border-b pb-4">1. Founders</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm flex flex-col items-center text-center">
-              <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-2xl font-bold mb-4">SS</div>
-              <h4 className="text-xl font-bold text-gray-900">Sameer Shaikh</h4>
+              <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-2xl font-bold mb-4">UP</div>
+              <h4 className="text-xl font-bold text-gray-900">Unnati Pachore</h4>
               <p className="text-gray-600 mt-2">Co-Founder, Visionary</p>
               <p className="text-sm text-gray-500 mt-4">Driving the platform&apos;s technical excellence and business strategy to bridge the gap between farms and dorms.</p>
             </div>
             <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100 shadow-sm flex flex-col items-center text-center">
-              <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-2xl font-bold mb-4">UP</div>
-              <h4 className="text-xl font-bold text-gray-900">Unnati Pachore</h4>
+              <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-2xl font-bold mb-4">SS</div>
+              <h4 className="text-xl font-bold text-gray-900">Sameer Shaikh</h4>
               <p className="text-gray-600 mt-2">Co-Founder, Operations</p>
               <p className="text-sm text-gray-500 mt-4">Focusing on operational efficiency and maintaining strong relationships with our farmer network.</p>
             </div>

@@ -12,11 +12,10 @@ export default function Navbar() {
   return (
     <header className="bg-white shadow">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
+        <div className="flex justify-between h-20 items-center">
           <div className="flex-shrink-0">
-            <Link href="/" className="flex items-center gap-2 text-2xl font-bold text-green-600">
-              <Image src="/logo.png" alt="फलचल Logo" width={40} height={40} className="object-contain" />
-              <span>फलचल</span>
+            <Link href="/" className="flex items-center gap-3 text-3xl font-bold text-green-600">
+              <img src="/logo.png" alt="फलचल Logo" className="h-[4rem] w-auto object-contain" />
             </Link>
           </div>
           

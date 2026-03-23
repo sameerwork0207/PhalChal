@@ -15,7 +15,7 @@ export default function Navbar() {
         <div className="flex justify-between h-20 items-center">
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center gap-3 text-3xl font-bold text-green-600">
-              <img src="/logo.png" alt="फलचल Logo" className="h-[4rem] w-auto object-contain" />
+              <img src="/logo.png" alt="फलचल Logo" className="h-[4rem] w-auto object-contain mix-blend-multiply" />
             </Link>
           </div>
           

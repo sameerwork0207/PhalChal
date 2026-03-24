@@ -13,7 +13,7 @@ export default function Home() {
       <div className="relative z-10 isolate px-6 pt-14 lg:px-8">
         <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56 text-center">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            Fresh from the village, directly to your dorm.
+            Fresh from Farm, to your Hostel.
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
             फलचल bridges the gap between rural farmers and college students. 
